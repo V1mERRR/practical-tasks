@@ -1,0 +1,25 @@
+def odd_str(n: int) -> str:
+    s = ""
+    
+    # Use for loop to run from 0 to n (included) 
+    # and form a string `s`.
+    # String `s` will contain only odd numbers from interval [0; n].
+    #
+    # For example,
+    # (0, 1, 2, 3, 4) -> "13"
+    # (0, 1, 2, 3, 4, 5, 6) -> "135" 
+
+    for i in range(n + 1):
+        if i % 2 != 0:
+            s += str(i)
+        # Task2: Output current odd number being added
+        print(f"Task2: Adding {i} to the string" if i % 2 != 0 else "")
+    
+    return s
+
+
+# Do not change the below's code
+if __name__ == "__main__":
+    assert odd_str(4) == "13"
+    assert odd_str(6) == "135"
+    assert odd_str(8) == "1357"
